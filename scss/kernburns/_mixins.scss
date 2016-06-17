@@ -1,0 +1,20 @@
+@mixin kb-inline-block($align: top) {
+	display: inline-block;
+	vertical-align: $align;
+}
+
+@mixin kb-hide-text() {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+@mixin kb-size($width, $height: $width) {
+	height: $height;
+	width: $width;
+}
+
+@mixin kb-list-reset($m:0, $p:0) {
+	margin: $m;
+	padding: $p;
+	list-style: none;
+}

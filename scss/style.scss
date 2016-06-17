@@ -1,0 +1,10 @@
+@import 'vendors/normalize';
+@import 'base/reset';
+
+#wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	width: 1088px;
+}

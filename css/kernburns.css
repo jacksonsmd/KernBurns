@@ -1,0 +1,133 @@
+.kb-gallery {
+  position: relative; }
+
+.kb-mask {
+  height: 660px;
+  width: 990px;
+  border: 1px solid #ccc;
+  margin: 0 auto 20px;
+  position: relative;
+  overflow: hidden; }
+
+.kb-slideset {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.kb-slide {
+  height: 105%;
+  width: 105%;
+  transition-duration: 1.5s;
+  transition-property: opacity;
+  animation-duration: 10s;
+  position: absolute;
+  left: -2%;
+  opacity: 0;
+  z-index: 1; }
+  .kb-slide.active {
+    opacity: 1;
+    z-index: 3; }
+  .kb-slide img {
+    width: 100%; }
+
+.kb-controls {
+  text-align: center; }
+
+.kb-pagination {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-align: center;
+  z-index: 500; }
+  .kb-pagination ul {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .kb-pagination li {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    position: relative;
+    float: left;
+    margin: 0 3px; }
+    .kb-pagination li:hover span {
+      background: #fff; }
+    .kb-pagination li.active span {
+      background: #888;
+      pointer-events: none; }
+  .kb-pagination span {
+    overflow: hidden;
+    text-indent: -9999px;
+    height: 12px;
+    width: 12px;
+    background: #414141;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+    display: block;
+    cursor: pointer; }
+
+.kb-btn-prev,
+.kb-btn-next {
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none; }
+  .kb-btn-prev:hover,
+  .kb-btn-next:hover {
+    color: #888; }
+
+.kb-slide.active-position:nth-child(1n) {
+  animation-name: left-right;
+  animation-fill-mode: forwards; }
+
+.kb-slide.active-position:nth-child(2n) {
+  animation-name: right-left;
+  animation-fill-mode: forwards; }
+
+.kb-slide.active-position:nth-child(3n) {
+  animation-name: center;
+  animation-fill-mode: forwards; }
+
+.kb-slide.active-position:nth-child(4n) {
+  animation-name: center2;
+  animation-fill-mode: forwards; }
+
+.kb-slide.active-position:nth-child(5n) {
+  animation-name: center3;
+  animation-fill-mode: forwards; }
+
+@keyframes left-right {
+  0% {
+    transform: translateY(-1%) translateX(1%) scale(1.05); }
+  100% {
+    transform: translateY(0%) translateX(0) scale(1); } }
+
+@keyframes right-left {
+  0% {
+    transform: translateY(0%) translateX(1%) scale(1.1); }
+  100% {
+    transform: translateY(0%) translateX(0) scale(1); } }
+
+@keyframes center {
+  0% {
+    transform: translateY(0%) translateX(0) scale(1.15); }
+  100% {
+    transform: translateY(0%) translateX(0) scale(1); } }
+
+@keyframes center2 {
+  0% {
+    transform: translateY(0) translateX(0) scale(1); }
+  100% {
+    transform: translateY(0%) translateX(0) scale(1.15); } }
+
+@keyframes center3 {
+  0% {
+    transform: translateY(-1%) translateX(0) scale(1.05); }
+  100% {
+    transform: translateY(0%) translateX(0) scale(1); } }
